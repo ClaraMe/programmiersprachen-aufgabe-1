@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+source/CMakeFiles/bla.dir/rule:
+	cd "/Users/metz-c/Desktop/Programmiersprachen /programmiersprachen-aufgabe-1/build" && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/bla.dir/rule
+.PHONY : source/CMakeFiles/bla.dir/rule
+
+# Convenience name for target.
+bla: source/CMakeFiles/bla.dir/rule
+
+.PHONY : bla
+
+# fast build rule for target.
+bla/fast:
+	cd "/Users/metz-c/Desktop/Programmiersprachen /programmiersprachen-aufgabe-1/build" && $(MAKE) -f source/CMakeFiles/bla.dir/build.make source/CMakeFiles/bla.dir/build
+.PHONY : bla/fast
+
+# Convenience name for target.
 source/CMakeFiles/tests.dir/rule:
 	cd "/Users/metz-c/Desktop/Programmiersprachen /programmiersprachen-aufgabe-1/build" && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/tests.dir/rule
 .PHONY : source/CMakeFiles/tests.dir/rule
@@ -139,6 +154,33 @@ helloworld: source/CMakeFiles/helloworld.dir/rule
 helloworld/fast:
 	cd "/Users/metz-c/Desktop/Programmiersprachen /programmiersprachen-aufgabe-1/build" && $(MAKE) -f source/CMakeFiles/helloworld.dir/build.make source/CMakeFiles/helloworld.dir/build
 .PHONY : helloworld/fast
+
+bla.o: bla.cpp.o
+
+.PHONY : bla.o
+
+# target to build an object file
+bla.cpp.o:
+	cd "/Users/metz-c/Desktop/Programmiersprachen /programmiersprachen-aufgabe-1/build" && $(MAKE) -f source/CMakeFiles/bla.dir/build.make source/CMakeFiles/bla.dir/bla.cpp.o
+.PHONY : bla.cpp.o
+
+bla.i: bla.cpp.i
+
+.PHONY : bla.i
+
+# target to preprocess a source file
+bla.cpp.i:
+	cd "/Users/metz-c/Desktop/Programmiersprachen /programmiersprachen-aufgabe-1/build" && $(MAKE) -f source/CMakeFiles/bla.dir/build.make source/CMakeFiles/bla.dir/bla.cpp.i
+.PHONY : bla.cpp.i
+
+bla.s: bla.cpp.s
+
+.PHONY : bla.s
+
+# target to generate assembly for a file
+bla.cpp.s:
+	cd "/Users/metz-c/Desktop/Programmiersprachen /programmiersprachen-aufgabe-1/build" && $(MAKE) -f source/CMakeFiles/bla.dir/build.make source/CMakeFiles/bla.dir/bla.cpp.s
+.PHONY : bla.cpp.s
 
 helloworld.o: helloworld.cpp.o
 
@@ -202,8 +244,12 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... bla"
 	@echo "... tests"
 	@echo "... helloworld"
+	@echo "... bla.o"
+	@echo "... bla.i"
+	@echo "... bla.s"
 	@echo "... helloworld.o"
 	@echo "... helloworld.i"
 	@echo "... helloworld.s"
